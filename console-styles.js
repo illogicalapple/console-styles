@@ -9,13 +9,15 @@ Object.defineProperty(console, "style", {
 			let join = this.join;
 			let go = this.go;
 			let applyStyle = this.applyStyle;
+			let joinStyle = this.joinStyle;
 			data.push(style === undefined ? data[data.length - 1] : style);
 			data[0] += "%c" + value.replaceAll("%", "\%");
 			return {
 				"data": data,
 				"join": join,
 				"go": go,
-				"applyStyle": applyStyle
+				"applyStyle": applyStyle,
+				"joinStyle": joinStyle
 			};
 		},
 		"go": function() {
@@ -23,6 +25,9 @@ Object.defineProperty(console, "style", {
 		},
 		"applyStyle": function(style) {
 			return this.join("", style);
+		},
+		"joinStyle": function(style) {
+			return this.applyStyle(this.data[this.data.length - 1] + " " + style)
 		}
 	}),
 	"writable": true
