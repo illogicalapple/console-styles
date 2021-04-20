@@ -27,7 +27,7 @@ Object.defineProperty(console, "style", {
 			return this.join("", style);
 		},
 		"joinStyle": function(style) {
-			return this.applyStyle(style + " " + this.data[this.data.length - 1])
+			return this.applyStyle(this.data[this.data.length - 1] + " " + style)
 		}
 	}),
 	"writable": true
