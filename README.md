@@ -9,3 +9,4 @@ You can chain those like this: `console.style(text, css).join(moretext, morecss)
 
 I hope you have fun making the console full of random junk!
 ![Example](example.png)
+**NOTE:** *Please* add semicolons to your styling: otherwise some things won't work. Example: `console.style("abc", "color: blue;")` instead of `console.style("abc", "color: blue")`.
