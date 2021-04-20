@@ -8,7 +8,7 @@ Object.defineProperty(console, "style", {
 			let data = this.data;
 			let join = this.join;
 			let go = this.go;
-			data.push(style);
+			data.push(style === undefined ? data[data.length - 1] : style);
 			data[0] += "%c" + value.replaceAll("%", "\%");
 			return {
 				"data": data,
