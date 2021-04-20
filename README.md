@@ -8,3 +8,4 @@ Use `.applyStyle(css)` to add some styling.
 You can chain those like this: `console.style(text, css).join(moretext, morecss).join(evenmoretext, evenmorecss).applyStyle(stylez).join(somuchtext).go();`.
 
 I hope you have fun making the console full of random junk!
+![Example](example.png)
